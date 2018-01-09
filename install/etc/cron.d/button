@@ -1,1 +1,1 @@
-@reboot pi cd /home/pi/buttons/mk4 && ./buttons > /home/pi/buttons.log
+@reboot pi cd /home/pi/pibuttons && ./buttons > /home/pi/pibuttons/run.log
