@@ -1,0 +1,1 @@
+@reboot pi cd /home/pi/pibuttons && ./git pull
