@@ -38,7 +38,7 @@ int main(void)
 	pinMode(input, INPUT);
 	digitalWrite(output, HIGH);
 
-	if (wiringPiISR(input, INT_EDGE_BOTH, &Pressed) < 0)
+	if (wiringPiISR(input, INT_EDGE_FALLING, &Pressed) < 0)
 	{
 		fprintf(stderr, "Unable to setup ISR: %s\n", strerror(errno));
 		return 1;
