@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TMATE=/home/pi/tmate/tmate
+TMATE=/home/pi/pibuttons/tmate
 SOCK=/tmp/tmate.sock
 
 ${TMATE} -S ${SOCK} new-session -d
