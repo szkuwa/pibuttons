@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Optotypes</title>
+    <style>
+        body{
+            background-color: black;
+            color: silver;
+        }
+    </style>
+</head>
+<body>
+    <div id="version">
+        Build: <span id="v"></span>
+    </div>
+
+    <script src="url.js"></script>
+    <script src="commits.js"></script>
+    <script>
+        var version = 'unknown';
+
+        if (commits && commits[0]) {
+            version = commits.length
+        }
+
+        document.getElementById('v').textContent = version;
+        setTimeout(function () {
+            window.location = url
+        }, 3000)
+    </script>
+</body>
+</html>
