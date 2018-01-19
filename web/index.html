@@ -11,11 +11,14 @@
             background-color: black;
             color: silver;
         }
+        #version{
+            font-size: 3em;
+        }
     </style>
 </head>
 <body>
     <div id="version">
-        Build: <span id="v"></span>
+        Version: <span id="v"></span>
     </div>
 
     <script src="url.js"></script>
@@ -24,7 +27,7 @@
         var version = 'unknown';
 
         if (commits && commits[0]) {
-            version = commits.length
+            version = commits.length + ', ' + commits[0].date
         }
 
         document.getElementById('v').textContent = version;
