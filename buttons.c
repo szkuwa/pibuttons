@@ -6,9 +6,9 @@
 #include <time.h>
 
 // input PIN (wg wiringPi: https://pinout.xyz/pinout/wiringpi)
-#define input 24
+#define input 25
 #define shPress "./pressed.sh"
-#define output 25
+#define output 24
 #define interruptDeBounce 350
 
 unsigned long lastInterrupt = 0;
@@ -36,6 +36,7 @@ int main(void)
 
 	pinMode(output, OUTPUT);
 	pinMode(input, INPUT);
+	pullUpDnControl(input, PUD_OFF);
 	digitalWrite(output, HIGH);
 
 	if (wiringPiISR(input, INT_EDGE_FALLING, &Pressed) < 0)
