@@ -7,4 +7,4 @@ if [ -f /home/pi/pibuttons/enable_tmate ]; then
     ./tmate.sh &
 fi
 
-./run.sh
+# ./run.sh
