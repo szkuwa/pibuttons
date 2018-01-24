@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-./buttons > run.log
+# ./buttons > run.log
 
